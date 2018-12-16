@@ -1,11 +1,10 @@
 {
   "scripts": {
-    "theme": "(cd antora-ui-camel && yarn install && yarn gulp pack)",
     "documentation": "antora --pull site.yml",
     "website": "hugo --minify",
     "critical": "gulp critical",
     "minify": "gulp minify",
-    "build": "run-s theme documentation website minify critical"
+    "build": "run-s documentation website minify critical"
   },
   "devDependencies": {
     "@antora/cli": "^2.0.0-beta.1",
@@ -15,5 +14,8 @@
     "gulp-htmlmin": "^5.0.1",
     "hugo-bin": "^0.39.0",
     "npm-run-all": "^4.1.5"
+  },
+  "installConfig": {
+    "pnp": true
   }
 }
